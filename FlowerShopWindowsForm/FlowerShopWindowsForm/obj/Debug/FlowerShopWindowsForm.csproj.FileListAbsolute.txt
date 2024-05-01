@@ -1,0 +1,11 @@
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\bin\Debug\FlowerShopWindowsForm.exe.config
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\bin\Debug\FlowerShopWindowsForm.exe
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\bin\Debug\FlowerShopWindowsForm.pdb
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\obj\Debug\FlowerShopWindowsForm.csproj.AssemblyReference.cache
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\obj\Debug\FlowerShopWindowsForm.csproj.SuggestedBindingRedirects.cache
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\obj\Debug\FlowerShopWindowsForm.Form1.resources
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\obj\Debug\FlowerShopWindowsForm.Properties.Resources.resources
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\obj\Debug\FlowerShopWindowsForm.csproj.GenerateResource.cache
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\obj\Debug\FlowerShopWindowsForm.csproj.CoreCompileInputs.cache
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\obj\Debug\FlowerShopWindowsForm.exe
+D:\an3\sem2\Projects\FlowerShop\FlowerShopWindowsForm\FlowerShopWindowsForm\obj\Debug\FlowerShopWindowsForm.pdb

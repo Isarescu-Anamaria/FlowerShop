@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlowerNames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFlowerNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFlowerNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSupplyNames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSupplyNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSupplyNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlowerColors">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFlowerColorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFlowerColorsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplyMaterials">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSupplyMaterialsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSupplyMaterialsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowerQuantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="flowerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowerColor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowerQuantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FlowerQuantityResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplyQuantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="supplyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="supplyMaterial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplyQuantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplyQuantityResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowerUnitPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="flowerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowerColor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowerUnitPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FlowerUnitPriceResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplyUnitPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="supplyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="supplyMaterial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplyUnitPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplyUnitPriceResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBouquetsDataSet">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBouquetsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBouquetsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBouquet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bouquetName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalPrice" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBouquetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertBouquetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBouquetName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oldName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBouquetNameResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateFlowerStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="flowerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowerColor" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFlowerStockResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateSupplyStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="supplyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="supplyMaterial" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSupplyStockResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowerNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFlowerNames" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowerNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFlowerNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplyNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplyNames" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplyNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplyNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowerColorsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFlowerColors" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowerColorsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFlowerColorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplyMaterialsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplyMaterials" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplyMaterialsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplyMaterialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FlowerQuantitySoapIn">
+    <wsdl:part name="parameters" element="tns:FlowerQuantity" />
+  </wsdl:message>
+  <wsdl:message name="FlowerQuantitySoapOut">
+    <wsdl:part name="parameters" element="tns:FlowerQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="SupplyQuantitySoapIn">
+    <wsdl:part name="parameters" element="tns:SupplyQuantity" />
+  </wsdl:message>
+  <wsdl:message name="SupplyQuantitySoapOut">
+    <wsdl:part name="parameters" element="tns:SupplyQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="FlowerUnitPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:FlowerUnitPrice" />
+  </wsdl:message>
+  <wsdl:message name="FlowerUnitPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:FlowerUnitPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SupplyUnitPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:SupplyUnitPrice" />
+  </wsdl:message>
+  <wsdl:message name="SupplyUnitPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:SupplyUnitPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBouquetsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBouquetsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetBouquetsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBouquetsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertBouquetSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertBouquet" />
+  </wsdl:message>
+  <wsdl:message name="InsertBouquetSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertBouquetResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBouquetNameSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBouquetName" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBouquetNameSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBouquetNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFlowerStockSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFlowerStock" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFlowerStockSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFlowerStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSupplyStockSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSupplyStock" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSupplyStockSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSupplyStockResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerNames">
+      <wsdl:input message="tns:GetFlowerNamesSoapIn" />
+      <wsdl:output message="tns:GetFlowerNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyNames">
+      <wsdl:input message="tns:GetSupplyNamesSoapIn" />
+      <wsdl:output message="tns:GetSupplyNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerColors">
+      <wsdl:input message="tns:GetFlowerColorsSoapIn" />
+      <wsdl:output message="tns:GetFlowerColorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyMaterials">
+      <wsdl:input message="tns:GetSupplyMaterialsSoapIn" />
+      <wsdl:output message="tns:GetSupplyMaterialsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlowerQuantity">
+      <wsdl:input message="tns:FlowerQuantitySoapIn" />
+      <wsdl:output message="tns:FlowerQuantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SupplyQuantity">
+      <wsdl:input message="tns:SupplyQuantitySoapIn" />
+      <wsdl:output message="tns:SupplyQuantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlowerUnitPrice">
+      <wsdl:input message="tns:FlowerUnitPriceSoapIn" />
+      <wsdl:output message="tns:FlowerUnitPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SupplyUnitPrice">
+      <wsdl:input message="tns:SupplyUnitPriceSoapIn" />
+      <wsdl:output message="tns:SupplyUnitPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBouquetsDataSet">
+      <wsdl:input message="tns:GetBouquetsDataSetSoapIn" />
+      <wsdl:output message="tns:GetBouquetsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBouquet">
+      <wsdl:input message="tns:InsertBouquetSoapIn" />
+      <wsdl:output message="tns:InsertBouquetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBouquetName">
+      <wsdl:input message="tns:UpdateBouquetNameSoapIn" />
+      <wsdl:output message="tns:UpdateBouquetNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlowerStock">
+      <wsdl:input message="tns:UpdateFlowerStockSoapIn" />
+      <wsdl:output message="tns:UpdateFlowerStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupplyStock">
+      <wsdl:input message="tns:UpdateSupplyStockSoapIn" />
+      <wsdl:output message="tns:UpdateSupplyStockSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerNames">
+      <soap:operation soapAction="http://tempuri.org/GetFlowerNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyNames">
+      <soap:operation soapAction="http://tempuri.org/GetSupplyNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerColors">
+      <soap:operation soapAction="http://tempuri.org/GetFlowerColors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyMaterials">
+      <soap:operation soapAction="http://tempuri.org/GetSupplyMaterials" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowerQuantity">
+      <soap:operation soapAction="http://tempuri.org/FlowerQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplyQuantity">
+      <soap:operation soapAction="http://tempuri.org/SupplyQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowerUnitPrice">
+      <soap:operation soapAction="http://tempuri.org/FlowerUnitPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplyUnitPrice">
+      <soap:operation soapAction="http://tempuri.org/SupplyUnitPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBouquetsDataSet">
+      <soap:operation soapAction="http://tempuri.org/GetBouquetsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBouquet">
+      <soap:operation soapAction="http://tempuri.org/InsertBouquet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBouquetName">
+      <soap:operation soapAction="http://tempuri.org/UpdateBouquetName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlowerStock">
+      <soap:operation soapAction="http://tempuri.org/UpdateFlowerStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupplyStock">
+      <soap:operation soapAction="http://tempuri.org/UpdateSupplyStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerNames">
+      <soap12:operation soapAction="http://tempuri.org/GetFlowerNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyNames">
+      <soap12:operation soapAction="http://tempuri.org/GetSupplyNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowerColors">
+      <soap12:operation soapAction="http://tempuri.org/GetFlowerColors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyMaterials">
+      <soap12:operation soapAction="http://tempuri.org/GetSupplyMaterials" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowerQuantity">
+      <soap12:operation soapAction="http://tempuri.org/FlowerQuantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplyQuantity">
+      <soap12:operation soapAction="http://tempuri.org/SupplyQuantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowerUnitPrice">
+      <soap12:operation soapAction="http://tempuri.org/FlowerUnitPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplyUnitPrice">
+      <soap12:operation soapAction="http://tempuri.org/SupplyUnitPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBouquetsDataSet">
+      <soap12:operation soapAction="http://tempuri.org/GetBouquetsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBouquet">
+      <soap12:operation soapAction="http://tempuri.org/InsertBouquet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBouquetName">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBouquetName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlowerStock">
+      <soap12:operation soapAction="http://tempuri.org/UpdateFlowerStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupplyStock">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSupplyStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44355/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44355/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
