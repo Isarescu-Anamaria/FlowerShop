@@ -13,12 +13,14 @@ namespace FlowerShopWindowsForm
     public partial class Form1 : Form
     {
         Service.WebService1 service = new Service.WebService1();
+
         public Form1()
         {
             InitializeComponent();
             PopulateFlowersComboBox();
             PopulateMaterialsComboBox();
             PopulateDataGridView();
+            
         }
 
         private void PopulateFlowersComboBox()
@@ -149,6 +151,9 @@ namespace FlowerShopWindowsForm
                 string selectedSupplyName = comboBox_Materiale.SelectedItem.ToString().Split(' ')[0];
                 string selectedSupplyMaterial = comboBox_Materiale.SelectedItem.ToString().Split(' ')[1];
 
+                //Console.WriteLine(selectedSupplyName);
+                //Console.WriteLine(selectedSupplyMaterial);
+                
                 double unitPrice = service.SupplyUnitPrice(selectedSupplyName, selectedSupplyMaterial);
 
                 label_Pret_M.Text = unitPrice.ToString();
@@ -232,10 +237,7 @@ namespace FlowerShopWindowsForm
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button_Create_Click(object sender, EventArgs e)
         {
@@ -333,6 +335,7 @@ namespace FlowerShopWindowsForm
                 MessageBox.Show("Vă rugăm să selectați un buchet din lista pentru a actualiza numele.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-            
+
+        
     }
 }

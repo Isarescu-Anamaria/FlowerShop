@@ -73,6 +73,7 @@
             // 
             // comboBox_Flori
             // 
+            this.comboBox_Flori.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox_Flori.Font = new System.Drawing.Font("Modern No. 20", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Flori.FormattingEnabled = true;
             this.comboBox_Flori.Location = new System.Drawing.Point(34, 128);
@@ -239,7 +240,7 @@
             this.label_Buchete.AutoSize = true;
             this.label_Buchete.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Buchete.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label_Buchete.Location = new System.Drawing.Point(536, 22);
+            this.label_Buchete.Location = new System.Drawing.Point(573, 21);
             this.label_Buchete.Name = "label_Buchete";
             this.label_Buchete.Size = new System.Drawing.Size(167, 32);
             this.label_Buchete.TabIndex = 15;
@@ -248,7 +249,7 @@
             // dataGridView_Buchete
             // 
             this.dataGridView_Buchete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Buchete.Location = new System.Drawing.Point(459, 65);
+            this.dataGridView_Buchete.Location = new System.Drawing.Point(459, 56);
             this.dataGridView_Buchete.Name = "dataGridView_Buchete";
             this.dataGridView_Buchete.RowHeadersWidth = 51;
             this.dataGridView_Buchete.RowTemplate.Height = 24;
@@ -269,7 +270,7 @@
             // button_Update
             // 
             this.button_Update.Font = new System.Drawing.Font("Modern No. 20", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Update.Location = new System.Drawing.Point(783, 483);
+            this.button_Update.Location = new System.Drawing.Point(617, 483);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(82, 25);
             this.button_Update.TabIndex = 18;
@@ -313,7 +314,7 @@
             this.label_Nume_Buchet.AutoSize = true;
             this.label_Nume_Buchet.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Nume_Buchet.ForeColor = System.Drawing.Color.Red;
-            this.label_Nume_Buchet.Location = new System.Drawing.Point(33, 424);
+            this.label_Nume_Buchet.Location = new System.Drawing.Point(66, 427);
             this.label_Nume_Buchet.Name = "label_Nume_Buchet";
             this.label_Nume_Buchet.Size = new System.Drawing.Size(265, 23);
             this.label_Nume_Buchet.TabIndex = 22;
@@ -332,24 +333,26 @@
             this.label_New_Name.AutoSize = true;
             this.label_New_Name.Font = new System.Drawing.Font("Segoe Script", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_New_Name.ForeColor = System.Drawing.Color.Red;
-            this.label_New_Name.Location = new System.Drawing.Point(455, 407);
+            this.label_New_Name.Location = new System.Drawing.Point(499, 410);
             this.label_New_Name.Name = "label_New_Name";
-            this.label_New_Name.Size = new System.Drawing.Size(328, 80);
+            this.label_New_Name.Size = new System.Drawing.Size(328, 40);
             this.label_New_Name.TabIndex = 24;
-            this.label_New_Name.Text = "Dacă doriți sa modificați numele buchetului, \r\n\r\nselectați-l și introduceți noul " +
-    "nume :\r\n\r\n";
+            this.label_New_Name.Text = "Dacă doriți sa modificați numele buchetului, \r\nselectați-l și introduceți noul nu" +
+    "me :\r\n";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(459, 483);
+            this.textBox2.Location = new System.Drawing.Point(459, 453);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(318, 24);
+            this.textBox2.Size = new System.Drawing.Size(404, 24);
             this.textBox2.TabIndex = 25;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::FlowerShopWindowsForm.Properties.Resources.fototapet_lalele_galbene;
             this.ClientSize = new System.Drawing.Size(877, 529);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label_New_Name);
